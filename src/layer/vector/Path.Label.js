@@ -1,17 +1,4 @@
 L.Path.include({
-	_showLabel: function (e) {
-		this._label.setLatLng(e.latlng);
-		this._map.showLabel(this._label);
-	},
-
-	_moveLabel: function (e) {
-		this._label.setLatLng(e.latlng);
-	},
-
-	_hideLabel: function () {
-		this._label._close();
-	},
-
 	bindLabel: function (content, options) {
 		if (!this._label || this._label.options !== options) {
 			this._label = new L.Label(options, this);
@@ -41,5 +28,18 @@ L.Path.include({
 				.off('mouseout', this._hideLabel);
 		}
 		return this;
+	},
+
+	_showLabel: function (e) {
+		this._label.setLatLng(e.latlng);
+		this._map.showLabel(this._label);
+	},
+
+	_moveLabel: function (e) {
+		this._label.setLatLng(e.latlng);
+	},
+
+	_hideLabel: function () {
+		this._label._close();
 	}
 });
