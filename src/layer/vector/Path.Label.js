@@ -29,5 +29,17 @@ L.Path.include({
 		}
 
 		return this;
+	},
+
+	unbindLabel: function () {
+		if (this._label) {
+			this._label = null;
+			this._showLabelAdded = false;
+			this
+				.off('mouseover', this._showLabel)
+				.off('mousemove', this._moveLabel)
+				.off('mouseout', this._hideLabel);
+		}
+		return this;
 	}
 });
