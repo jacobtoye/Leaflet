@@ -71,6 +71,7 @@
 		'layer/marker/DivIcon.js',
 		'layer/marker/Marker.js',
 		'layer/marker/Marker.Popup.js',
+		'layer/marker/Marker.Label.js',
 		'layer/marker/Marker.Drag.js',
 
 		'layer/vector/Path.js',
