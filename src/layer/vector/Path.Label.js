@@ -30,6 +30,12 @@ L.Path.include({
 		return this;
 	},
 
+	updateLabelContent: function (content) {
+		if (this._label) {
+			this._label.setContent(content);
+		}
+	},
+
 	_showLabel: function (e) {
 		this._label.setLatLng(e.latlng);
 		this._map.showLabel(this._label);

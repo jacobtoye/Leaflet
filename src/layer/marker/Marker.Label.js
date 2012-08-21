@@ -40,5 +40,11 @@ L.Marker.include({
 				.off('mouseout', this.hideLabel);
 		}
 		return this;
+	},
+
+	updateLabelContent: function (content) {
+		if (this._label) {
+			this._label.setContent(content);
+		}
 	}
 });
