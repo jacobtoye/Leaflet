@@ -41,6 +41,7 @@
 		'map/Map.js',
 
 		'map/ext/Map.Geolocation.js',
+		'map/ext/Map.Label.js',
 		'map/ext/Map.Popup.js',
 		'map/ext/Map.Control.js',
 
@@ -63,6 +64,7 @@
 		'layer/tile/TileLayer.Canvas.js',
 		'layer/ImageOverlay.js',
 		'layer/Popup.js',
+		'layer/Label.js',
 
 		'layer/marker/Icon.js',
 		'layer/marker/Icon.Default.js',
@@ -72,6 +74,7 @@
 		'layer/marker/Marker.Drag.js',
 
 		'layer/vector/Path.js',
+		'layer/vector/Path.Label.js',
 		'layer/vector/Path.Popup.js',
 		'layer/vector/Path.SVG.js',
 		'layer/vector/Path.VML.js',
