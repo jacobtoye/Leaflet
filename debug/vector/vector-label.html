@@ -14,6 +14,10 @@
 </head>
 <body>
 	<div id="map"></div>
+	<div style="position: absolute; top: 10px; left: 49px;">
+		<button id="btnUnbind">test unbind</button>
+		<button id="btnUpdateLabel">test update label</button>
+	</div>
 
 	<script>
 		var map = L.map('map');
@@ -45,6 +49,21 @@
 			key: 'BC9A493B41014CAABB98F0471D759707',
 			styleId: 997
 		}).addTo(map);
+
+		function unbind() {
+			circle.unbindLabel();
+			marker.unbindLabel();
+		}
+
+		var i = 0;
+		function updateText() {
+			circle.updateLabelContent('Circle: ' + i);
+			marker.updateLabelContent('Marker: ' + i);
+			i++;
+		}
+
+		L.DomUtil.get('btnUnbind').onclick = unbind;
+		L.DomUtil.get('btnUpdateLabel').onclick = updateText;
 
 	</script>
 </body>
